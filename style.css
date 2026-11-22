@@ -1,0 +1,573 @@
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+:root {
+    --asosiy: rgb(23, 111, 165);
+    --yashil: rgb(32, 185, 154);
+    --fon: rgb(240, 247, 251);
+    --matn: rgb(83, 100, 119);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fon);
+}
+
+
+/* HEADER */
+
+.tepa {
+    background-color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.tepa h2 a {
+    color: var(--asosiy);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.tepa h2 span {
+    color: var(--yashil);
+}
+
+.menyu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menyu a {
+    background: none;
+    border: none;
+    color: var(--asosiy);
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menyu a:hover {
+    color: var(--yashil);
+    transform: translateY(-2px);
+}
+
+#rejim {
+    background-color: var(--asosiy);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+/* SAHIFALAR */
+
+.sahifa {
+    display: none;
+    padding: 60px 7%;
+}
+
+#bosh {
+    display: block;
+}
+
+
+/* KATTA RASMLAR */
+
+.katta-blok {
+    position: relative;
+    height: 500px;
+    margin-bottom: 80px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.katta-blok img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.katta-yozuv {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    max-width: 550px;
+    color: white;
+    z-index: 2;
+}
+
+.katta-blok::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 36, 61, 0.8),
+        rgba(8, 36, 61, 0.15)
+    );
+}
+
+.katta-yozuv h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.katta-yozuv p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.katta-yozuv button {
+    background-color: var(--yashil);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.katta-yozuv button:hover {
+    background-color: var(--asosiy);
+    transform: translateY(-3px);
+}
+
+.ikkinchi-blok {
+    height: 450px;
+}
+
+
+/* QATORLAR */
+
+.qator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 80px;
+    background-color: white;
+    padding: 40px;
+    min-height: 420px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.teskari {
+    flex-direction: row-reverse;
+}
+
+.matn {
+    width: 50%;
+}
+
+.matn h4 {
+    color: var(--yashil);
+    margin-bottom: 20px;
+}
+
+.matn h1 {
+    color: var(--asosiy);
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.matn h2 {
+    color: var(--asosiy);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.matn p {
+    color: var(--matn);
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+.matn button {
+    background-color: var(--yashil);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.matn button:hover {
+    background-color: var(--asosiy);
+    transform: translateY(-3px);
+}
+
+.rasm {
+    width: 50%;
+}
+
+.rasm img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+/* SAHIFA SARLAVHALARI */
+
+.sahifa > h1 {
+    color: var(--asosiy);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.izoh {
+    text-align: center;
+    color: var(--matn);
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+
+/* STATISTIKA */
+
+.statistika {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0 70px;
+}
+
+.stat {
+    background-color: white;
+    padding: 35px 15px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--yashil);
+}
+
+.stat h2 {
+    font-size: 35px;
+    color: var(--asosiy);
+    margin-bottom: 10px;
+}
+
+.stat p {
+    color: var(--matn);
+    font-size: 16px;
+}
+
+
+/* SHIFOKORLAR */
+
+.doctorlar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.doctor {
+    background-color: white;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.doctor:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(23, 111, 165, 0.15);
+}
+
+.doctor img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.doctor h2 {
+    color: var(--asosiy);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.doctor h4 {
+    color: var(--yashil);
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.doctor p {
+    color: var(--matn);
+    line-height: 1.7;
+    margin-top: 8px;
+}
+
+
+/* NARXLAR */
+
+.narxlar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.narx {
+    background-color: white;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    border-bottom: 4px solid var(--yashil);
+}
+
+.narx:hover {
+    transform: translateY(-8px);
+    border-bottom-color: var(--asosiy);
+}
+
+.narx h2 {
+    color: var(--asosiy);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.narx p {
+    color: var(--matn);
+    margin-bottom: 20px;
+}
+
+.narx h3 {
+    color: var(--yashil);
+    font-size: 25px;
+}
+
+.narx-izoh {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--matn);
+    line-height: 1.7;
+}
+
+.narx-tugma {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* QABUL FORMASI */
+
+.qabul-blok {
+    background-color: white;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.qabul-blok form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.qabul-blok label {
+    color: var(--asosiy);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.qabul-blok input,
+.qabul-blok select,
+.qabul-blok textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d5e2eb;
+    border-radius: 9px;
+    font-size: 16px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.qabul-blok input:focus,
+.qabul-blok select:focus,
+.qabul-blok textarea:focus {
+    border-color: var(--yashil);
+    box-shadow: 0 0 5px rgba(32, 185, 154, 0.2);
+}
+
+.qabul-blok textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.qabul-blok button {
+    background-color: var(--yashil);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 17px;
+    border-radius: 9px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.qabul-blok button:hover {
+    background-color: var(--asosiy);
+}
+
+
+/* FOOTER */
+
+.past {
+    background-color: var(--asosiy);
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+.past h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.past p {
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+
+/* TUNGI REJIM */
+
+body.tungi {
+    background-color: #101c2b;
+}
+
+body.tungi .tepa {
+    background-color: #1e3044;
+}
+
+body.tungi .tepa h2 a {
+    color: white;
+}
+
+body.tungi .menyu a {
+    color: white;
+}
+
+body.tungi .menyu a:hover {
+    color: var(--yashil);
+}
+
+body.tungi .menyu #rejim {
+    background-color: var(--yashil);
+    color: white;
+}
+
+body.tungi .qator,
+body.tungi .doctor,
+body.tungi .narx,
+body.tungi .stat,
+body.tungi .qabul-blok {
+    background-color: #1e3044;
+}
+
+body.tungi .matn h1,
+body.tungi .matn h2,
+body.tungi .sahifa > h1,
+body.tungi .doctor h2,
+body.tungi .narx h2,
+body.tungi .stat h2,
+body.tungi .qabul-blok label {
+    color: #80c5f5;
+}
+
+body.tungi .matn p,
+body.tungi .doctor p,
+body.tungi .narx p,
+body.tungi .stat p,
+body.tungi .izoh,
+body.tungi .narx-izoh {
+    color: #d1dbe5;
+}
+
+body.tungi .qabul-blok input,
+body.tungi .qabul-blok select,
+body.tungi .qabul-blok textarea {
+    background-color: #263b51;
+    color: white;
+    border-color: #40566c;
+}
+
+body.tungi .past {
+    background-color: #0b1726;
+}
+
+
+/* ANIMATSIYALAR */
+
+.qator {
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+.qator.chap {
+    transform: translateX(-100px);
+}
+
+.qator.ong {
+    transform: translateX(100px);
+}
+
+.qator.korindi {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.katta-blok {
+    opacity: 0;
+    transform: scale(0.9);
+    filter: blur(5px);
+    transition: all 1.3s ease;
+}
+
+.katta-blok.korindi {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+
